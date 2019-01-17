@@ -18,12 +18,17 @@
     "laravel/framework": "5.5.*",
     "laravel/tinker": "~1.0",
     "predis/predis": "^1.1",
-    "eveseat/api": "~3",
-    "eveseat/console": "~3",
-    "eveseat/eveapi": "~3",
-    "eveseat/notifications": "~3",
-    "eveseat/services": "~3",
-    "eveseat/web": "~3"
+    "spectrefleet/api": "~3",
+    "spectrefleet/calendar": "^3.0",
+    "spectrefleet/console": "~3",
+    "spectrefleet/eveapi": "~3",
+    "spectrefleet/notifications": "~3",
+    "spectrefleet/seat-discord-connector": "^3.1",
+    "spectrefleet/seat-fitting": "^3.0",
+    "spectrefleet/seat-groups": "^1.5",
+    "spectrefleet/seat-teamspeak": "^3.0",
+    "spectrefleet/services": "~3",
+    "spectrefleet/web": "~3"
   },
   "require-dev": {
     "filp/whoops": "~2.0",
@@ -51,6 +56,10 @@
       ]
     }
   },
+  "repositories": [{
+    "type": "composer",
+    "url": "http://satis.sf.twi.ninja"
+  }],
   "scripts": {
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -66,6 +75,7 @@
   "config": {
     "preferred-install": "dist",
     "sort-packages": true,
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "secure-http": false
   }
 }
